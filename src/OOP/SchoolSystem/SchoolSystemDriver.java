@@ -12,7 +12,6 @@ public class SchoolSystemDriver {
         System.out.println("Enter The School Details: ");
         SchoolService.addSchool();
 
-
     }
 
 }
