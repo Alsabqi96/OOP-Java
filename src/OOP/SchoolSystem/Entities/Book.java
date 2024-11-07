@@ -1,5 +1,4 @@
 package OOP.SchoolSystem.Entities;
-import java.util.Date;
 
 public class Book {
     public String name;
