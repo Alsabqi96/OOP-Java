@@ -8,6 +8,7 @@ public class School {
     public List<Student> students;
     public List<Teacher> teachers;
     public Library library;
+
 }
 
 
