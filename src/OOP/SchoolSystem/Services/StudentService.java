@@ -1,5 +1,6 @@
 package OOP.SchoolSystem.Services;
 import OOP.SchoolSystem.Entities.Student;
+import OOP.SchoolSystem.Entities.Subject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,18 +14,20 @@ public class StudentService {
 
         Student student = new Student();
         System.out.println("Enter Student Id: ");
-        student.id = scanner.nextLine();
+        student.setId(scanner.nextLine());
 
         System.out.println("Enter Student Name: ");
-        student.name = scanner.nextLine();
+        student.setName(scanner.nextLine());
+
 
         System.out.println("Enter Student Grade: ");
-        student.grade = scanner.nextLine();
-        scanner.nextLine();
-        System.out.println("Enter Student Age: ");
-        student.age = scanner.nextShort();
+        student.setGrade(scanner.nextLine());
 
-        student.courses = SubjectService.addSubjects(false);
+
+        System.out.println("Enter Student Age: ");
+        student.setAge(scanner.nextShort());
+
+        List<Subject>studentCourses = SubjectService.addSubjects(false);
 
         return student;
     }

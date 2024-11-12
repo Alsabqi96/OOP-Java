@@ -19,11 +19,11 @@ public class Teacher {
         this.id = id;
     }
 
-    public Short getYearsOfExperience() {
+    public Integer getYearsOfExperience() {
         return yearsOfExperience;
     }
 
-    public void setYearsOfExperience(Short yearsOfExperience) {
+    public void setYearsOfExperience(Integer yearsOfExperience) {
         this.yearsOfExperience = yearsOfExperience;
     }
 
@@ -37,6 +37,6 @@ public class Teacher {
 
     private String name;
     private String id;
-    private Short yearsOfExperience;
+    private Integer yearsOfExperience;
     private List<Subject> subjectsExpertiseList; //Descriptive name to mention it is a list
 }

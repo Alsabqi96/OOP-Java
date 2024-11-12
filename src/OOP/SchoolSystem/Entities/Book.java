@@ -1,9 +1,9 @@
 package OOP.SchoolSystem.Entities;
 
 public class Book {
-    public String name;
-    public String author;
-    public Integer id;
+    private String name;
+    private String author;
+    private Integer id;
 
     public String getName() {
         return name;

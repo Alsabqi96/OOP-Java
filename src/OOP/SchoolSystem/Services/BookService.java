@@ -13,19 +13,13 @@ public class BookService {
 
         Book book = new Book();
         System.out.println("Enter Book Name: ");
-        book.name = scanner.nextLine();
+        book.setName(scanner.nextLine());
 
         System.out.println("Enter Book Author: ");
-        book.author = scanner.nextLine();
+        book.setAuthor(scanner.nextLine());
 
         System.out.println("Enter Book Id: ");
-        book.id = scanner.nextInt();
-
-        System.out.println("Enter year Of Publishing: ");
-        book.yearOfPublishing = scanner.nextLine();
-
-        System.out.println("Is Available? ");
-        book.isAvailable = scanner.nextBoolean();
+        book.setId(scanner.nextInt());
 
         return book;
     }

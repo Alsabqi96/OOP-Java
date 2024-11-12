@@ -14,16 +14,17 @@ public class MarkService {
 
         Mark mark = new Mark();
         System.out.println("Enter the Mark: ");
-        mark.marks = scanner.nextFloat();
+        mark.setMarks(scanner.nextFloat());
 
         System.out.println("Enter the Comments: ");
-        mark.comments = scanner.nextLine();
+        mark.setComments(scanner.nextLine());
         scanner.nextLine();
+
         System.out.println("Enter Grade: ");
-        mark.grade = scanner.nextLine();
+        mark.setGrade(scanner.nextLine());
 
         System.out.println("Enter Description: ");
-        mark.description = scanner.nextLine();
+        mark.setDescription(scanner.nextLine());
 
 
         return mark;

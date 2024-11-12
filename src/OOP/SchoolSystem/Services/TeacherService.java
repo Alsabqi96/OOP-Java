@@ -1,4 +1,5 @@
 package OOP.SchoolSystem.Services;
+import OOP.SchoolSystem.Entities.Subject;
 import OOP.SchoolSystem.Entities.Teacher;
 
 import java.util.ArrayList;
@@ -12,15 +13,15 @@ public class TeacherService {
 
         Teacher teacher = new Teacher();
         System.out.println("Enter Teacher Name: ");
-        teacher.name = scanner.nextLine();
+        teacher.setId(scanner.nextLine());
 
         System.out.println("Enter Teacher ID: ");
-        teacher.id = scanner.nextLine();
+        teacher.setName(scanner.nextLine());
 
         System.out.println("Enter Years of Experience: ");
-        teacher.yearsOfExperience = scanner.nextShort();
+        teacher.setYearsOfExperience(scanner.nextInt());
 
-        teacher.subjectsExpertiseList = SubjectService.addSubjects(true);
+       List<Subject> teacherSubjectsExpertiseList = SubjectService.addSubjects(true);
 
 
         return teacher;

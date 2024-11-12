@@ -1,4 +1,5 @@
 package OOP.SchoolSystem.Services;
+import OOP.SchoolSystem.Entities.Mark;
 import OOP.SchoolSystem.Entities.Subject;
 
 import java.util.ArrayList;
@@ -11,12 +12,16 @@ public class SubjectService {
 
         Subject subject = new Subject();
         System.out.println("Enter Subject Name: ");
-        subject.name = scanner.nextLine();
-
-        System.out.println("Enter Credit Hours: ");
-        subject.creditHours = scanner.nextShort();
+        subject.setName(scanner.nextLine());
         scanner.nextLine();
-        subject.marks = MarkService.addMarks();
+        System.out.println("Enter Credit Hours: ");
+        subject.setCreditHours(scanner.nextShort());
+
+        if (!isTeacher){
+            System.out.println("Enter marks for subjects");
+            List<Mark> subjectMarks = MarkService.addMarks();
+            subject.setMarks(subjectMarks);
+        }
 
         return subject;
     }
@@ -27,6 +32,7 @@ public class SubjectService {
         while (flag) {
             subjects.add(SubjectService.addSubject(isTeacher));
             System.out.println("Enter N to exit for subject, Enter Any Key to continue");
+            scanner.nextLine();
             if (scanner.nextLine().equalsIgnoreCase("N")) {
                 flag = false;
             }

@@ -11,8 +11,8 @@ public class LibraryService {
 
         Library library = new Library();
         System.out.println("Enter Library Name: ");
-        library.name = scanner.nextLine();
-
+        String libraryName = scanner.nextLine();
+        library.setName(libraryName);
         library.books = BookService.addBooks();
 
 
