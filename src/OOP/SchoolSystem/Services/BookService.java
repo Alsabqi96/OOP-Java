@@ -35,8 +35,15 @@ public class BookService {
         List<Book> books = new ArrayList<>();
         while (flag) {
             books.add(BookService.addBook());
+            System.out.println("Enter N to exit , Enter Any Key to continue");
+            scanner.nextLine();
+            if (scanner.nextLine().equalsIgnoreCase("N")) {
+                flag = false;
+
+            }
         }
         return books;
     }
 }
+
 
