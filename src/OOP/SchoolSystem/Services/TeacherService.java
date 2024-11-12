@@ -28,6 +28,7 @@ public class TeacherService {
 
     public static List<Teacher> addTeachers() {
         Boolean flag = true;
+
         List<Teacher> teachers = new ArrayList<>();
         while (flag) {
             teachers.add(TeacherService.addTeacher());

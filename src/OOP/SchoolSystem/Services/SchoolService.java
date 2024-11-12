@@ -33,6 +33,7 @@ public class SchoolService {
                 schools.add(SchoolService.addSchool());
             }
             return schools;
+
         }
     }
 
