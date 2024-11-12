@@ -20,11 +20,11 @@ public class StudentService {
 
         System.out.println("Enter Student Grade: ");
         student.grade = scanner.nextLine();
-
+        scanner.nextLine();
         System.out.println("Enter Student Age: ");
         student.age = scanner.nextShort();
 
-        student.courses = SubjectService.addSubjects();
+        student.courses = SubjectService.addSubjects(false);
 
         return student;
     }
@@ -33,6 +33,11 @@ public class StudentService {
         List<Student> students = new ArrayList<>();
         while (flag) {
             students.add(StudentService.addStudent());
+            System.out.println("Enter N to exit from student, Enter Any Key to continue");
+            scanner.nextLine();
+            if (scanner.nextLine().equalsIgnoreCase("N")) {
+                flag = false;
+            }
         }
         return students;
     }

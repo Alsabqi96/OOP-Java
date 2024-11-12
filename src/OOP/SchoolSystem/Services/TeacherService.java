@@ -20,7 +20,7 @@ public class TeacherService {
         System.out.println("Enter Years of Experience: ");
         teacher.yearsOfExperience = scanner.nextShort();
 
-        teacher.subjectsExpertiseList = SubjectService.addSubjects();
+        teacher.subjectsExpertiseList = SubjectService.addSubjects(true);
 
 
         return teacher;
@@ -31,6 +31,11 @@ public class TeacherService {
         List<Teacher> teachers = new ArrayList<>();
         while (flag) {
             teachers.add(TeacherService.addTeacher());
+            System.out.println("Enter N to exit from Teacher, Enter Any Key to continue");
+            scanner.nextLine();
+            if (scanner.nextLine().equalsIgnoreCase("N")) {
+                flag = false;
+            }
         }
         return teachers;
     }

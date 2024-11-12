@@ -1,4 +1,5 @@
 package OOP.SchoolSystem.Services;
+
 import OOP.SchoolSystem.Entities.Mark;
 
 import java.util.ArrayList;
@@ -17,13 +18,12 @@ public class MarkService {
 
         System.out.println("Enter the Comments: ");
         mark.comments = scanner.nextLine();
-
+        scanner.nextLine();
         System.out.println("Enter Grade: ");
         mark.grade = scanner.nextLine();
 
         System.out.println("Enter Description: ");
         mark.description = scanner.nextLine();
-
 
 
         return mark;
@@ -32,9 +32,13 @@ public class MarkService {
     public static List<Mark> addMarks() {
         Boolean flag = true;
         List<Mark> marks = new ArrayList<>();
-        while (flag) {
+        do {
             marks.add(MarkService.addMark());
+            System.out.println("Enter N to exit from Mark, Enter Any Key to continue");
+            flag = scanner.nextLine().equals("N") ? false : true;
         }
+        while (flag);
+
         return marks;
     }
 }
