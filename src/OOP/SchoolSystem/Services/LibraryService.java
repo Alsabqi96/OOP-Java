@@ -18,13 +18,4 @@ public class LibraryService {
         return library;
     }
 
-    public static List<Library> addLibraries() {
-        Boolean flag = true;
-        List<Library> libraries = new ArrayList<>();
-        while (flag) {
-            libraries.add(LibraryService.addLibrary());
-        }
-        return libraries;
-    }
-
 }
