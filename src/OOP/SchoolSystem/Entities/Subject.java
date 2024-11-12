@@ -32,3 +32,4 @@ public class Subject {
     private List<Mark> marks;
 
 }
+
