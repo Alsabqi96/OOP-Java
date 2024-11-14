@@ -1,7 +1,8 @@
 package OOP.SchoolSystem.Entities;
 import java.util.List;
 
-public class Student {
+public class
+Student {
     private String id;
     private String name;
     private String grade;
